@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine
+FROM golang:1.22-alpine as builder
 
 WORKDIR /app
 
@@ -9,6 +9,10 @@ COPY *.go ./
 
 RUN go build -o /go-backend
 
+FROM scratch
+
+COPY --from=builder /go-backend /go-backend
+
 EXPOSE 8080
 
-CMD ["/go-backend"]
+ENTRYPOINT [ "/go-backend" ]
