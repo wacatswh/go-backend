@@ -44,7 +44,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: ecs-project-taskdef-revision1.json
+          task-definition: .github/workflows/ecs-project-taskdef-revision1.json
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
           environment-variables: API_SECRET_KEY=${{ secrets.API_SECRET_KEY }}
