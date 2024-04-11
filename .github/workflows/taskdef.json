@@ -76,7 +76,7 @@
     "cpu": "1024",
     "memory": "2048",
     "runtimePlatform": {
-        "cpuArchitecture": "ARM64",
+        "cpuArchitecture": "AMD64",
         "operatingSystemFamily": "LINUX"
     },
     "registeredAt": "2024-04-11T14:32:47.325Z",
