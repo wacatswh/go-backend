@@ -14,7 +14,7 @@ func main() {
 		fmt.Fprintf(w, "hello world")
 	})
 
-	if err := http.ListenAndServe("0.0.0.0:8080", mux); err != nil {
+	if err := http.ListenAndServe("0.0.0.0:80", mux); err != nil {
 		fmt.Println(err.Error())
 	}
 }
