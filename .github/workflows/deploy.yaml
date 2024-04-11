@@ -7,6 +7,7 @@ env:
   ECR_REPOSITORY: go-backend
   ECS_SERVICE: go-backend
   ECS_CLUSTER: go-backend
+  ECS_TASK_DEFINITION: .github/workflows/taskdef.json
   CONTAINER_NAME: go-backend
 jobs:
   deploy:
@@ -44,7 +45,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: .github/workflows/ecs-project-taskdef-revision1.json
+          task-definition: ${{ env.ECS_TASK_DEFINITION }}
           container-name: ${{ env.CONTAINER_NAME }}
           image: ${{ steps.build-image.outputs.image }}
           environment-variables: API_SECRET_KEY=${{ secrets.API_SECRET_KEY }}
