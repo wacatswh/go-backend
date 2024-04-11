@@ -1,4 +1,4 @@
-FROM golang:1.22-alpine as builder
+FROM --platform=linux/arm64 golang:1.22-alpine as builder
 
 WORKDIR /app
 
