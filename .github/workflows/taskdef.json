@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:810034107245:task-definition/ecs-project-taskdef:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:810034107245:task-definition/ecs-project-taskdef:5",
     "containerDefinitions": [
         {
             "name": "go-backend",
