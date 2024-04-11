@@ -14,6 +14,10 @@ func main() {
 		fmt.Fprintf(w, "hello world")
 	})
 
+	mux.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintf(w, "test path")
+	})
+
 	if err := http.ListenAndServe("0.0.0.0:80", mux); err != nil {
 		fmt.Println(err.Error())
 	}
