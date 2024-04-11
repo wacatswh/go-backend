@@ -5,8 +5,8 @@ on:
 env:
   AWS_REGION: ap-southeast-1
   ECR_REPOSITORY: go-backend
-  ECS_SERVICE: go-backend
-  ECS_CLUSTER: go-backend
+  ECS_SERVICE: test-service
+  ECS_CLUSTER: test-cluster
   ECS_TASK_DEFINITION: .github/workflows/taskdef.json
   CONTAINER_NAME: go-backend
 jobs:
