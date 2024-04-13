@@ -5,9 +5,11 @@ import (
 	"net/http"
 )
 
-func main() {
-	fmt.Println("Hello World!")
+func Sum(a, b int) int {
+	return a + b
+}
 
+func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
