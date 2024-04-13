@@ -25,6 +25,7 @@ jobs:
           version: v1.54
   test:
     name: Unit test
+    runs-on: ubuntu-latest
     steps:
       - name: go test
         run: go test ./...
